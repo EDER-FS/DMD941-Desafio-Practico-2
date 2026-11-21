@@ -1,0 +1,6 @@
+FALTA COPIAR EL ARCHIVO ORIGINAL Desafio2_AdventureWorks.pbix
+DESDE LA COMPUTADORA DEL ESTUDIANTE.
+
+El dashboard de Power BI se construyó a partir de dbo.vw_Desafio2Ventas
+(modo Importar) y contiene 2 páginas / 6 visualizaciones.
+No se ha acreditado que utilice el cubo SSAS como fuente.

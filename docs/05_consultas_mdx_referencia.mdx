@@ -1,0 +1,34 @@
+-- CONSULTAS MDX DE REFERENCIA (NO EJECUTADAS MANUALMENTE EN LAS CAPTURAS)
+-- Destino: Analysis Services / DMD941_Desafio2_CuboOLAP
+-- Verificar los nombres efectivos de dimensiones, jerarquías y medidas en SSMS
+-- antes de ejecutar; ajustarlos si el asistente genera nombres diferentes.
+
+-- 1) Importes y cantidades por canal (total del cubo)
+SELECT
+  {
+    [Measures].[Sales Amount],
+    [Measures].[Sales Amount - Fact Reseller Sales],
+    [Measures].[Order Quantity],
+    [Measures].[Order Quantity - Fact Reseller Sales]
+  } ON COLUMNS
+FROM [Cubo Ventas AdventureWorks];
+
+-- 2) Comparación por categoría de producto y año del pedido
+SELECT
+  {
+    [Measures].[Sales Amount],
+    [Measures].[Sales Amount - Fact Reseller Sales],
+    [Measures].[Order Quantity],
+    [Measures].[Order Quantity - Fact Reseller Sales]
+  } ON COLUMNS,
+  NON EMPTY (
+    [Dim Productos].[Clasificación de Productos].[Categoría].MEMBERS
+    * [Order Date].[Calendario].[Año].MEMBERS
+  ) ON ROWS
+FROM [Cubo Ventas AdventureWorks];
+
+-- 3) Ventas por categoría, solo Internet
+SELECT
+  {[Measures].[Sales Amount]} ON COLUMNS,
+  NON EMPTY [Dim Productos].[Clasificación de Productos].[Categoría].MEMBERS ON ROWS
+FROM [Cubo Ventas AdventureWorks];

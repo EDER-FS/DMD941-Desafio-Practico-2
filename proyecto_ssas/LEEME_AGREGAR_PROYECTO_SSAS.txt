@@ -1,0 +1,10 @@
+FALTA COPIAR LA SOLUCION NATIVA DEL EQUIPO WINDOWS.
+
+Desde el directorio de Visual Studio del proyecto DMD941_Desafio2_CuboOLAP,
+copiar la solución .sln, el archivo .dwproj, y las carpetas:
+Data Sources (*.ds), Data Source Views (*.dsv), Dimensions (*.dim), Cubes (*.cube),
+y otros fuentes necesarios de la solución.
+
+Evitar carpetas bin/, obj/, .vs/ y archivos de credenciales personales.
+Los nombres de servidor locales pueden requerir actualización al reproducir.
+No se han generado aquí archivos .sln ni .dwproj ficticios.
