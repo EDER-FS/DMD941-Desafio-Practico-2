@@ -3,7 +3,7 @@
 **Proyecto:** `DMD941_Desafio2_CuboOLAP`  
 **Caso de estudio:** AdventureWorksDW2022  
 **Repositorio de destino:** https://github.com/EDER-FS/DMD941-Desafio-Practico-2  
-**Estado de esta carpeta:** paquete preparado para publicación; **no representa un commit remoto realizado**.
+**Estado del proyecto:** Implementado, procesado y validado funcionalmente en SQL Server Analysis Services 2022. El repositorio contiene la documentación académica, los scripts SQL, las evidencias, el proyecto multidimensional SSAS y el archivo original de Power BI.
 
 ## Resumen
 
@@ -28,8 +28,8 @@ Se restauró `AdventureWorksDW2022` en SQL Server 2022 Express y se construyó `
 - [`docs/04_configuracion_y_pruebas_ssas.md`](docs/04_configuracion_y_pruebas_ssas.md): arquitectura, solución de incidencias, pasos reproducibles y resultados.
 - [`docs/05_consultas_mdx_referencia.mdx`](docs/05_consultas_mdx_referencia.mdx): consultas MDX propuestas para una ejecución manual adicional; **no constituyen evidencia de ejecución**.
 - [`docs/06_checklist_publicacion.md`](docs/06_checklist_publicacion.md): verificación de entregables y publicación.
-- `sql/`: tres scripts de exploración, creación de vista y consultas SQL gerenciales.
-- `evidencias/`: capturas del trabajo SQL/Power BI y capturas nuevas de SSAS.
+- `proyecto_ssas/`: contiene la solución nativa de Visual Studio y el proyecto multidimensional de SQL Server Analysis Services 2022, incluyendo dimensiones, cubo, particiones y definiciones del origen de datos.
+- `powerbi/`: contiene el archivo original `Desafio2_AdventureWorks.pbix`, correspondiente al dashboard de análisis de ventas.
 - `proyecto_ssas/`: espacio para copiar la **solución nativa de Visual Studio** desde la computadora de desarrollo.
 - `powerbi/`: espacio para añadir el archivo nativo `.pbix` desde la computadora de desarrollo.
 
@@ -37,11 +37,11 @@ Se restauró `AdventureWorksDW2022` en SQL Server 2022 Express y se construyó `
 
 1. Restaurar `AdventureWorksDW2022.bak` en la instancia SQL Server relacional; **no** añadir el `.bak` al repositorio.
 2. Ejecutar los scripts de `sql/` en orden desde SSMS conectado al Motor de base de datos.
-3. Abrir la solución de Analysis Services de `proyecto_ssas/` en Visual Studio (una vez copiada desde el equipo local).
+3. Abrir `proyecto_ssas/DMD941_Desafio2_CuboOLAP/DMD941_Desafio2_CuboOLAP.slnx` en Visual Studio con la extensión de proyectos de Analysis Services instalada.
 4. Ajustar `Data Source` al nombre de la instancia SQL local y `Deployment` al servidor SSAS propio.
 5. Verificar la cuenta de suplantación y los permisos de lectura a la base relacional; implementar y procesar.
 6. Abrir el cubo en el Explorador, agregar `Sales Amount`, `Sales Amount - Fact Reseller Sales`, `Order Quantity` y `Order Quantity - Fact Reseller Sales` y cruzarlas por Categoría y Año.
-7. En Power BI, abrir el archivo `.pbix` añadido por el estudiante y comprobar sus seis visualizaciones.
+7. Abrir `powerbi/Desafio2_AdventureWorks.pbix` en Power BI Desktop, configurar la conexión al origen SQL Server cuando sea necesario y comprobar las seis visualizaciones distribuidas en dos páginas.
 
 ## Alcance exacto de las pruebas
 
