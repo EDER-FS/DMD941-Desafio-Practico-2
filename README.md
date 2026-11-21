@@ -28,10 +28,10 @@ Se restauró `AdventureWorksDW2022` en SQL Server 2022 Express y se construyó `
 - [`docs/04_configuracion_y_pruebas_ssas.md`](docs/04_configuracion_y_pruebas_ssas.md): arquitectura, solución de incidencias, pasos reproducibles y resultados.
 - [`docs/05_consultas_mdx_referencia.mdx`](docs/05_consultas_mdx_referencia.mdx): consultas MDX propuestas para una ejecución manual adicional; **no constituyen evidencia de ejecución**.
 - [`docs/06_checklist_publicacion.md`](docs/06_checklist_publicacion.md): verificación de entregables y publicación.
+- `sql/`: tres scripts de exploración, creación de vista y consultas SQL gerenciales.
+- `evidencias/`: capturas del trabajo SQL/Power BI y capturas de SSAS.
 - `proyecto_ssas/`: contiene la solución nativa de Visual Studio y el proyecto multidimensional de SQL Server Analysis Services 2022, incluyendo dimensiones, cubo, particiones y definiciones del origen de datos.
 - `powerbi/`: contiene el archivo original `Desafio2_AdventureWorks.pbix`, correspondiente al dashboard de análisis de ventas.
-- `proyecto_ssas/`: espacio para copiar la **solución nativa de Visual Studio** desde la computadora de desarrollo.
-- `powerbi/`: espacio para añadir el archivo nativo `.pbix` desde la computadora de desarrollo.
 
 ## Reproducir el escenario
 
